@@ -1,0 +1,34 @@
+{
+  "absolutePath": "output1.txt",
+  "nodeType": "SourceUnit",
+  "nodes":
+  [
+    {
+      "literals":
+      [
+        "solidity",
+        "0.6",
+        ".2"
+      ],
+      "nodeType": "PragmaDirective"
+    },
+    {
+      "baseContracts": [],
+      "name": "solidity",
+      "nodeType": "ContractDefinition",
+      "nodes":
+      [
+        {
+          "name": "x",
+          "nodeType": "VariableDeclaration",
+          "typeName":
+          {
+            "name": "int",
+            "nodeType": "ElementaryTypeName"
+          },
+          "value": null
+        }
+      ]
+    }
+  ]
+}
