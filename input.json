@@ -1,120 +1,292 @@
 {
-  "absolutePath": "output.txt",
-  "exportedSymbols":
-  {
-    "sample":
-    [
-      32
-    ]
-  },
-  "id": 33,
+  "absolutePath": "MyLibrary.sol",
   "nodeType": "SourceUnit",
   "nodes":
   [
     {
-      "id": 1,
       "literals":
       [
         "solidity",
         "0.6",
-        ".2"
+        ".4"
       ],
-      "nodeType": "PragmaDirective",
-      "src": "0:22:0"
+      "nodeType": "PragmaDirective"
     },
     {
-      "abstract": false,
-      "baseContracts": [],
-      "contractDependencies": [],
       "contractKind": "contract",
-      "documentation": null,
-      "fullyImplemented": true,
-      "id": 32,
-      "linearizedBaseContracts":
-      [
-        32
-      ],
-      "name": "sample",
+      "name": "Library",
       "nodeType": "ContractDefinition",
       "nodes":
       [
         {
-          "constant": false,
-          "id": 3,
-          "name": "x",
-          "nodeType": "VariableDeclaration",
-          "overrides": null,
-          "scope": 32,
-          "src": "41:5:0",
-          "stateVariable": true,
-          "storageLocation": "default",
-          "typeDescriptions":
-          {
-            "typeIdentifier": "t_int256",
-            "typeString": "int256"
-          },
-          "typeName":
-          {
-            "id": 2,
-            "name": "int",
-            "nodeType": "ElementaryTypeName",
-            "src": "41:3:0",
-            "typeDescriptions":
-            {
-              "typeIdentifier": "t_int256",
-              "typeString": "int256"
-            }
-          },
-          "value": null,
-          "visibility": "internal"
-        },
-        {
           "body":
           {
-            "id": 10,
             "nodeType": "Block",
-            "src": "69:13:0",
             "statements":
             [
               {
-                "expression":
+                "body":
                 {
-                  "argumentTypes": null,
-                  "id": 8,
-                  "isConstant": false,
-                  "isLValue": false,
-                  "isPure": false,
-                  "lValueRequested": false,
-                  "leftHandSide":
+                  "condition":
                   {
-                    "argumentTypes": null,
-                    "id": 6,
-                    "name": "x",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 3,
-                    "src": "73:1:0",
-                    "typeDescriptions":
+                    "commonType":
                     {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
+                    },
+                    "leftExpression":
+                    {
+                      "baseExpression":
+                      {
+                        "name": "arr",
+                        "nodeType": "Identifier",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_array$_t_int256_$dyn_memory_ptr",
+                          "typeString": "int256[] memory"
+                        }
+                      },
+                      "indexExpression":
+                      {
+                        "arguments":
+                        [
+                          {
+                            "name": "i",
+                            "nodeType": "Identifier",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression":
+                        {
+                          "argumentTypes":
+                          [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName":
+                          {
+                            "name": "uint",
+                            "nodeType": "ElementaryTypeName",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": null,
+                              "typeString": null
+                            }
+                          }
+                        },
+                        "kind": "typeConversion",
+                        "nodeType": "FunctionCall",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "IndexAccess",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression":
+                    {
+                      "name": "x",
+                      "nodeType": "Identifier",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
                     }
                   },
-                  "nodeType": "Assignment",
-                  "operator": "=",
-                  "rightHandSide":
+                  "nodeType": "IfStatement",
+                  "trueBody":
                   {
-                    "argumentTypes": null,
+                    "expression":
+                    {
+                      "argumentTypes": null,
+                      "arguments":
+                      [
+                        {
+                          "name": "i",
+                          "nodeType": "Identifier",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression":
+                      {
+                        "argumentTypes":
+                        [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_type$_t_int256_$",
+                          "typeString": "type(int256)"
+                        },
+                        "typeName":
+                        {
+                          "name": "int",
+                          "nodeType": "ElementaryTypeName",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "kind": "typeConversion",
+                      "nodeType": "FunctionCall",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Return"
+                  }
+                },
+                "condition":
+                {
+                  "commonType":
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "leftExpression":
+                  {
+                    "name": "i",
+                    "nodeType": "Identifier",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "BinaryOperation",
+                  "operator": "<",
+                  "rightExpression":
+                  {
+                    "name": "arr_len",
+                    "nodeType": "Identifier",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "initializationExpression":
+                {
+                  "declarations":
+                  [
+                    {
+                      "name": "i",
+                      "nodeType": "VariableDeclaration",
+                      "stateVariable": false,
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName":
+                      {
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null
+                    }
+                  ],
+                  "initialValue":
+                  {
+                    "hexValue": "30",
+                    "kind": "number",
+                    "nodeType": "Literal",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "nodeType": "VariableDeclarationStatement"
+                },
+                "loopExpression":
+                {
+                  "expression":
+                  {
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "subExpression":
+                    {
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "ExpressionStatement"
+                },
+                "nodeType": "ForStatement"
+              },
+              {
+                "expression":
+                {
+                  "nodeType": "UnaryOperation",
+                  "operator": "-",
+                  "prefix": true,
+                  "subExpression":
+                  {
                     "hexValue": "31",
-                    "id": 7,
-                    "isConstant": false,
-                    "isLValue": false,
                     "isPure": true,
                     "kind": "number",
-                    "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "77:1:0",
-                    "subdenomination": null,
                     "typeDescriptions":
                     {
                       "typeIdentifier": "t_rational_1_by_1",
@@ -122,108 +294,109 @@
                     },
                     "value": "1"
                   },
-                  "src": "73:5:0",
                   "typeDescriptions":
                   {
-                    "typeIdentifier": "t_int256",
-                    "typeString": "int256"
+                    "typeIdentifier": "t_rational_minus_1_by_1",
+                    "typeString": "int_const -1"
                   }
                 },
-                "id": 9,
-                "nodeType": "ExpressionStatement",
-                "src": "73:5:0"
+                "nodeType": "Return"
               }
             ]
           },
-          "documentation": null,
-          "id": 11,
-          "implemented": true,
-          "kind": "constructor",
-          "modifiers": [],
-          "name": "",
-          "nodeType": "FunctionDefinition",
-          "overrides": null,
-          "parameters":
-          {
-            "id": 4,
-            "nodeType": "ParameterList",
-            "parameters": [],
-            "src": "60:2:0"
-          },
-          "returnParameters":
-          {
-            "id": 5,
-            "nodeType": "ParameterList",
-            "parameters": [],
-            "src": "69:0:0"
-          },
-          "scope": 32,
-          "src": "49:33:0",
-          "stateMutability": "nonpayable",
-          "virtual": false,
-          "visibility": "public"
-        },
-        {
-          "body":
-          {
-            "id": 18,
-            "nodeType": "Block",
-            "src": "119:16:0",
-            "statements":
-            [
-              {
-                "expression":
-                {
-                  "argumentTypes": null,
-                  "id": 16,
-                  "name": "x",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 3,
-                  "src": "130:1:0",
-                  "typeDescriptions":
-                  {
-                    "typeIdentifier": "t_int256",
-                    "typeString": "int256"
-                  }
-                },
-                "functionReturnParameters": 15,
-                "id": 17,
-                "nodeType": "Return",
-                "src": "123:8:0"
-              }
-            ]
-          },
-          "documentation": null,
-          "functionSelector": "5197c7aa",
-          "id": 19,
           "implemented": true,
           "kind": "function",
-          "modifiers": [],
-          "name": "getX",
+          "name": "search",
           "nodeType": "FunctionDefinition",
-          "overrides": null,
           "parameters":
           {
-            "id": 12,
-            "nodeType": "ParameterList",
-            "parameters": [],
-            "src": "97:2:0"
-          },
-          "returnParameters":
-          {
-            "id": 15,
             "nodeType": "ParameterList",
             "parameters":
             [
               {
-                "constant": false,
-                "id": 14,
+                "name": "arr",
+                "nodeType": "VariableDeclaration",
+                "src": "64:16:0",
+                "storageLocation": "memory",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_array$_t_int256_$dyn_memory_ptr",
+                  "typeString": "int256[]"
+                },
+                "typeName":
+                {
+                  "baseType":
+                  {
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_array$_t_int256_$dyn_storage_ptr",
+                    "typeString": "int256[]"
+                  }
+                },
+                "value": null
+              },
+              {
+                "name": "arr_len",
+                "nodeType": "VariableDeclaration",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName":
+                {
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null
+              },
+              {
+                "id": 8,
+                "name": "x",
+                "nodeType": "VariableDeclaration",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName":
+                {
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null
+              }
+            ]
+          },
+          "returnParameters":
+          {
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "id": 11,
                 "name": "",
                 "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 19,
-                "src": "115:3:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions":
@@ -233,124 +406,480 @@
                 },
                 "typeName":
                 {
-                  "id": 13,
                   "name": "int",
                   "nodeType": "ElementaryTypeName",
-                  "src": "115:3:0",
                   "typeDescriptions":
                   {
                     "typeIdentifier": "t_int256",
                     "typeString": "int256"
                   }
                 },
-                "value": null,
-                "visibility": "internal"
+                "value": null
               }
-            ],
-            "src": "114:5:0"
+            ]
           },
-          "scope": 32,
-          "src": "84:51:0",
-          "stateMutability": "nonpayable",
-          "virtual": false,
+          "stateMutability": "pure",
           "visibility": "public"
         },
         {
           "body":
           {
-            "id": 30,
             "nodeType": "Block",
-            "src": "184:21:0",
             "statements":
             [
               {
-                "expression":
-                {
-                  "argumentTypes": null,
-                  "components":
-                  [
+                "declarations":
+                [
+                  {
+                    "name": "copyNum",
+                    "nodeType": "VariableDeclaration",
+                    "overrides": null,
+                    "typeDescriptions":
                     {
-                      "argumentTypes": null,
-                      "id": 26,
-                      "name": "x",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "196:1:0",
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "typeName":
+                    {
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
                       "typeDescriptions":
                       {
                         "typeIdentifier": "t_int256",
                         "typeString": "int256"
                       }
                     },
+                    "value": null
+                  }
+                ],
+                "initialValue":
+                {
+                  "name": "num",
+                  "nodeType": "Identifier",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "nodeType": "VariableDeclarationStatement"
+              },
+              {
+                "declarations":
+                [
+                  {
+                    "name": "fact",
+                    "nodeType": "VariableDeclaration",
+                    "typeDescriptions":
                     {
-                      "argumentTypes": null,
-                      "id": 27,
-                      "name": "x",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "199:1:0",
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "typeName":
+                    {
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
                       "typeDescriptions":
                       {
                         "typeIdentifier": "t_int256",
                         "typeString": "int256"
                       }
-                    }
-                  ],
-                  "id": 28,
-                  "isConstant": false,
-                  "isInlineArray": false,
-                  "isLValue": false,
-                  "isPure": false,
-                  "lValueRequested": false,
-                  "nodeType": "TupleExpression",
-                  "src": "195:6:0",
+                    },
+                    "visibility": "internal"
+                  }
+                ],
+                "initialValue":
+                {
+                  "hexValue": "31",
+                  "kind": "number",
+                  "nodeType": "Literal",
                   "typeDescriptions":
                   {
-                    "typeIdentifier": "t_tuple$_t_int256_$_t_int256_$",
-                    "typeString": "tuple(int256,int256)"
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  },
+                  "value": "1"
+                },
+                "nodeType": "VariableDeclarationStatement"
+              },
+              {
+                "condition":
+                {
+                  "commonType":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "leftExpression":
+                  {
+                    "name": "num",
+                    "nodeType": "Identifier",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "nodeType": "BinaryOperation",
+                  "operator": "<",
+                  "rightExpression":
+                  {
+                    "hexValue": "30",
+                    "kind": "number",
+                    "nodeType": "Literal",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "src": "351:7:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
                   }
                 },
-                "functionReturnParameters": 25,
-                "id": 29,
-                "nodeType": "Return",
-                "src": "188:13:0"
+                "falseBody":
+                {
+                  "condition":
+                  {
+                    "argumentTypes": null,
+                    "commonType":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "leftExpression":
+                    {
+                      "name": "num",
+                      "nodeType": "Identifier",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression":
+                    {
+                      "hexValue": "31",
+                      "kind": "number",
+                      "nodeType": "Literal",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "nodeType": "IfStatement",
+                  "trueBody":
+                  {
+                    "nodeType": "Block",
+                    "statements":
+                    [
+                      {
+                        "body":
+                        {
+                          "nodeType": "Block",
+                          "statements":
+                          [
+                            {
+                              "expression":
+                              {
+                                "leftHandSide":
+                                {
+                                  "name": "fact",
+                                  "nodeType": "Identifier",
+                                  "typeDescriptions":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "rightHandSide":
+                                {
+                                  "commonType":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  },
+                                  "leftExpression":
+                                  {
+                                    "name": "fact",
+                                    "nodeType": "Identifier",
+                                    "typeDescriptions":
+                                    {
+                                      "typeIdentifier": "t_int256",
+                                      "typeString": "int256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "*",
+                                  "rightExpression":
+                                  {
+                                    "nodeType": "UnaryOperation",
+                                    "operator": "--",
+                                    "prefix": false,
+                                    "subExpression":
+                                    {
+                                      "name": "num",
+                                      "nodeType": "Identifier",
+                                      "typeDescriptions":
+                                      {
+                                        "typeIdentifier": "t_int256",
+                                        "typeString": "int256"
+                                      }
+                                    },
+                                    "typeDescriptions":
+                                    {
+                                      "typeIdentifier": "t_int256",
+                                      "typeString": "int256"
+                                    }
+                                  },
+                                  "typeDescriptions":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "typeDescriptions":
+                                {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                }
+                              },
+                              "nodeType": "ExpressionStatement"
+                            }
+                          ]
+                        },
+                        "condition":
+                        {
+                          "commonType":
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "leftExpression":
+                          {
+                            "name": "num",
+                            "nodeType": "Identifier",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">",
+                          "rightExpression":
+                          {
+                            "hexValue": "31",
+                            "kind": "number",
+                            "nodeType": "Literal",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "WhileStatement"
+                      }
+                    ]
+                  }
+                },
+    "nodeType": "IfStatement",
+                "trueBody":
+                {
+                  "expression":
+                  {
+                    "leftHandSide":
+                    {
+                      "name": "fact",
+                      "nodeType": "Identifier",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide":
+                    {
+                      "nodeType": "UnaryOperation",
+                      "operator": "-",
+                      "prefix": true,
+                      "subExpression":
+                      {
+                        "hexValue": "31",
+                        "kind": "number",
+                        "nodeType": "Literal",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_rational_minus_1_by_1",
+                        "typeString": "int_const -1"
+                      }
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "nodeType": "ExpressionStatement"
+                }
+              },
+              {
+                "expression":
+                {
+                  "argumentTypes": null,
+                  "condition":
+                  {
+                    "argumentTypes": null,
+                    "commonType":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "leftExpression":
+                    {
+                      "name": "fact",
+                      "nodeType": "Identifier",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression":
+                    {
+                      "arguments":
+                      [
+                        {
+                          "name": "copyNum",
+                          "nodeType": "Identifier",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        }
+                      ],
+                      "expression":
+                      {
+                        "argumentTypes":
+                        [
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        ],
+                        "name": "verifyFactorial",
+                        "nodeType": "Identifier",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_function_internal_pure$_t_int256_$returns$_t_int256_$",
+                          "typeString": "function (int256) pure returns (int256)"
+                        }
+                      },
+                      "kind": "functionCall",
+                      "nodeType": "FunctionCall",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseExpression":
+                  {
+                    "nodeType": "UnaryOperation",
+                    "operator": "-",
+                    "prefix": true,
+                    "subExpression":
+                    {
+                      "hexValue": "32",
+                      "kind": "number",
+                      "nodeType": "Literal",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_rational_minus_2_by_1",
+                      "typeString": "int_const -2"
+                    }
+                  },
+                  "nodeType": "Conditional",
+                  "trueExpression":
+                  {
+                    "name": "fact",
+                    "nodeType": "Identifier",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "nodeType": "Return"
               }
             ]
           },
-          "documentation": null,
-          "functionSelector": "b9386d5a",
-          "id": 31,
-          "implemented": true,
           "kind": "function",
-          "modifiers": [],
-          "name": "getVX",
+          "name": "factorial",
           "nodeType": "FunctionDefinition",
-          "overrides": null,
           "parameters":
           {
-            "id": 20,
-            "nodeType": "ParameterList",
-            "parameters": [],
-            "src": "152:2:0"
-          },
-          "returnParameters":
-          {
-            "id": 25,
             "nodeType": "ParameterList",
             "parameters":
             [
               {
-                "constant": false,
-                "id": 22,
-                "name": "",
+                "name": "num",
                 "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 31,
-                "src": "175:3:0",
-                "stateVariable": false,
-                "storageLocation": "default",
                 "typeDescriptions":
                 {
                   "typeIdentifier": "t_int256",
@@ -358,29 +887,467 @@
                 },
                 "typeName":
                 {
-                  "id": 21,
                   "name": "int",
                   "nodeType": "ElementaryTypeName",
-                  "src": "175:3:0",
                   "typeDescriptions":
                   {
                     "typeIdentifier": "t_int256",
                     "typeString": "int256"
                   }
                 },
-                "value": null,
-                "visibility": "internal"
+                "value": null
+             }
+            ]
+          },
+          "returnParameters":
+          {
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "name": "",
+                "nodeType": "VariableDeclaration",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName":
+                {
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null
+              }
+            ]
+          },
+          "visibility": "public"
+        },
+        {
+          "body":
+          {
+            "nodeType": "Block",
+            "statements":
+            [
+              {
+                "declarations":
+                [
+                  {
+                    "name": "fact",
+                    "nodeType": "VariableDeclaration",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "typeName":
+                    {
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "value": null
+                  }
+                ],
+                "initialValue":
+                {
+                  "argumentTypes": null,
+                  "hexValue": "31",
+                  "kind": "number",
+                  "nodeType": "Literal",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  },
+                  "value": "1"
+                },
+                "nodeType": "VariableDeclarationStatement"
               },
               {
-                "constant": false,
-                "id": 24,
-                "name": "",
+                "condition":
+                {
+                  "commonType":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "leftExpression":
+                  {
+                    "name": "num",
+                    "nodeType": "Identifier",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "nodeType": "BinaryOperation",
+                  "operator": "<",
+                  "rightExpression":
+                  {
+                    "hexValue": "30",
+                    "kind": "number",
+                    "nodeType": "Literal",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "falseBody":
+                {
+                  "condition":
+                  {
+                    "argumentTypes": null,
+                    "commonType":
+                    {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "leftExpression":
+                    {
+                      "name": "num",
+                      "nodeType": "Identifier",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression":
+                    {
+                      "hexValue": "31",
+                      "kind": "number",
+                      "nodeType": "Literal",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody":
+                  {
+                    "nodeType": "Block",
+                    "statements":
+                    [
+                      {
+                        "expression":
+                        {
+                          "leftHandSide":
+                          {
+                            "id": 135,
+                            "name": "fact",
+                            "nodeType": "Identifier",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide":
+                          {
+                            "kind": "number",
+                            "nodeType": "Literal",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "nodeType": "ExpressionStatement"
+                      }
+                    ]
+                  },
+                  "nodeType": "IfStatement",
+                  "trueBody":
+                  {
+                    "nodeType": "Block",
+                    "statements":
+                    [
+                      {
+                        "body":
+                        {
+                          "nodeType": "Block",
+                          "statements":
+                          [
+                            {
+                              "expression":
+                              {
+                                "leftHandSide":
+                                {
+                                  "name": "fact",
+                                  "nodeType": "Identifier",
+                                  "typeDescriptions":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "rightHandSide":
+                                {
+                                  "commonType":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  },
+                                  "leftExpression":
+                                  {
+                                    "name": "fact",
+                                    "nodeType": "Identifier",
+                                    "typeDescriptions":
+                                    {
+                                      "typeIdentifier": "t_int256",
+                                      "typeString": "int256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "*",
+                                  "rightExpression":
+                                  {
+                                    "name": "num",
+                                    "nodeType": "Identifier",
+                                    "typeDescriptions":
+                                    {
+                                      "typeIdentifier": "t_int256",
+                                      "typeString": "int256"
+                                    }
+                                  },
+                                  "typeDescriptions":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "typeDescriptions":
+                                {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                }
+                              },
+                              "nodeType": "ExpressionStatement"
+                            },
+                            {
+                              "expression":
+                              {
+                                "leftHandSide":
+                                {
+                                  "name": "num",
+                                  "nodeType": "Identifier",
+                                  "typeDescriptions":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "rightHandSide":
+                                {
+                                  "commonType":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  },
+                                  "leftExpression":
+                                  {
+                                    "name": "num",
+                                    "nodeType": "Identifier",
+                                    "typeDescriptions":
+                                    {
+                                      "typeIdentifier": "t_int256",
+                                      "typeString": "int256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "-",
+                                  "rightExpression":
+                                  {
+                                    "hexValue": "31",
+                                    "kind": "number",
+                                    "nodeType": "Literal",
+                                    "typeDescriptions":
+                                    {
+                                      "typeIdentifier": "t_rational_1_by_1",
+                                      "typeString": "int_const 1"
+                                    },
+                                    "value": "1"
+                                  },
+                                  "typeDescriptions":
+                                  {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "typeDescriptions":
+                                {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                }
+                              },
+                              "nodeType": "ExpressionStatement"
+                            }
+                          ]
+                        },
+                        "condition":
+                        {
+                          "commonType":
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "leftExpression":
+                          {
+                            "name": "num",
+                            "nodeType": "Identifier",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">",
+                          "rightExpression":
+                          {
+                            "hexValue": "31",
+                            "kind": "number",
+                            "nodeType": "Literal",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "DoWhileStatement"
+                      }
+                    ]
+                  }
+                },
+                "nodeType": "IfStatement",
+                "trueBody":
+                {
+                  "nodeType": "Block",
+                  "statements":
+                  [
+                    {
+                      "expression":
+                      {
+                        "leftHandSide":
+                        {
+                          "name": "fact",
+                          "nodeType": "Identifier",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "nodeType": "Assignment",
+                        "operator": "=",
+                        "rightHandSide":
+                        {
+                          "nodeType": "UnaryOperation",
+                          "operator": "-",
+                          "prefix": true,
+                          "subExpression":
+                          {
+                            "hexValue": "31",
+                            "kind": "number",
+                            "nodeType": "Literal",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_rational_minus_1_by_1",
+                            "typeString": "int_const -1"
+                          }
+                        },
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      "nodeType": "ExpressionStatement"
+                    }
+                  ]
+                }
+              },
+              {
+                "expression":
+                {
+                  "name": "fact",
+                  "nodeType": "Identifier",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "nodeType": "Return"
+              }
+            ]
+          },
+          "kind": "function",
+          "name": "verifyFactorial",
+          "nodeType": "FunctionDefinition",
+          "parameters":
+          {
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "name": "num",
                 "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 31,
-                "src": "180:3:0",
-                "stateVariable": false,
-                "storageLocation": "default",
                 "typeDescriptions":
                 {
                   "typeIdentifier": "t_int256",
@@ -388,32 +1355,48 @@
                 },
                 "typeName":
                 {
-                  "id": 23,
                   "name": "int",
                   "nodeType": "ElementaryTypeName",
-                  "src": "180:3:0",
                   "typeDescriptions":
                   {
                     "typeIdentifier": "t_int256",
                     "typeString": "int256"
                   }
                 },
-                "value": null,
-                "visibility": "internal"
+                "value": null
               }
-            ],
-            "src": "174:10:0"
+            ]
           },
-          "scope": 32,
-          "src": "138:67:0",
-          "stateMutability": "view",
-          "virtual": false,
+          "returnParameters":
+          {
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "name": "",
+                "nodeType": "VariableDeclaration",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName":
+                {
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null
+              }
+            ]
+          },
           "visibility": "public"
         }
-      ],
-      "scope": 33,
-      "src": "23:184:0"
+      ]
     }
-  ],
-  "src": "0:208:0"
+  ]
 }
